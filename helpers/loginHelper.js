@@ -14,12 +14,12 @@ async function login(page) {
   // Docs: https://playwright.dev/docs/api/class-page#page-goto
 
   // Fill username field
-  await page.fill('input[name="username"]', 'admin');
+  await page.fill('input[id="username"]', 'admin');
   // fill() types text into input fields
   // Docs: https://playwright.dev/docs/api/class-page#page-fill
 
   // Fill password field
-  await page.fill('input[name="password"]', 'password123');
+  await page.fill('input[id="password"]', 'password123');
 
   // Click login button
   await page.click('button[type="submit"]');

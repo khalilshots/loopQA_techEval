@@ -12,6 +12,7 @@ test('Login works', async ({ page }) => {
 
   // Verify we are no longer on login screen
   // Example: check that "Web Application" is visible
-  await expect(page.locator('text=Web Application')).toBeVisible();
+  await expect(
+  page.getByRole('banner').getByRole('heading', { name: 'Web Application' })).toBeVisible();
 
 });
