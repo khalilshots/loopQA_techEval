@@ -1,33 +1,28 @@
-/**
- * loginHelper.js
- *
- * This file exports a reusable login function.
- * We isolate login logic so we don't repeat it in every test.
- */
+
+
+// Following a DRY principle his file exports a reusable login function.
+
+
 
 async function login(page) {
-  // page is Playwright's browser tab instance.
-  // Docs: https://playwright.dev/docs/api/class-page
 
   // Navigate to the application URL
   await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
-  // Docs: https://playwright.dev/docs/api/class-page#page-goto
 
-  // Fill username field
+
+  // Fill username field using id 
   await page.fill('input[id="username"]', 'admin');
-  // fill() types text into input fields
-  // Docs: https://playwright.dev/docs/api/class-page#page-fill
 
-  // Fill password field
+
+  // Fill username field using id 
   await page.fill('input[id="password"]', 'password123');
 
   // Click login button
   await page.click('button[type="submit"]');
-  // Docs: https://playwright.dev/docs/api/class-page#page-click
 
-  // Wait for navigation to complete
+  // Assert navigation to completion
   await page.waitForLoadState('networkidle');
-  // Docs: https://playwright.dev/docs/api/class-page#page-wait-for-load-state
-}
 
+}
+// export login for reuse in our test cases
 module.exports = { login };
