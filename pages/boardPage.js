@@ -2,6 +2,7 @@
 //this file runs the test cases for the data in our json file to keep Data Driven Principles and inifinte scalability ->called by the test suite in board.spec.js
 
 const { expect } = require('@playwright/test');
+
 class BoardPage {
 
   constructor(page) {
