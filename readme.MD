@@ -127,20 +127,3 @@ Chromium is used in CI for speed and stability.
 The project supports multi-browser testing locally (Chromium, Firefox, WebKit).
 
 ---
-
-## Repository Hygiene
-
-The `.gitignore` excludes:
-
-- node_modules  
-- Playwright test artifacts  
-- OS-specific files  
-
-This keeps the repository clean and lightweight.
-
----
-
-## Configuration Format
-
-Playwright is configured using CommonJS for consistency with Node.js environments and CI pipelines.  
-While ESM is supported, CommonJS remains widely used in production automation projects and avoids module compatibility issues.
